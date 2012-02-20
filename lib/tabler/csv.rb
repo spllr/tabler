@@ -21,6 +21,9 @@ module Tabler
       end
     end
 
+    alias_method :to_csv, :generate
+    alias_method :to_s, :generate
+
     # Creates a hash with a :headers field
     # and a :values field
     #
