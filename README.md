@@ -2,7 +2,7 @@
 
 Tabler generates csv from an array of hashes.
 
-It will transform hashes with inconsistent keys into consistant tables.
+It will transform hashes with inconsistent keys into consistant csv tables.
 
 ## Installation
 
@@ -25,7 +25,7 @@ Tabler.generate(data, :col_sep => ";") # => Generate the csv string
 
 ```
 
-The string the above exaple will look like:
+The generated string from the exmaple will look like:
 
 ```
 col1;col2;col3
