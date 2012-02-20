@@ -25,7 +25,7 @@ Tabler.generate(data, :col_sep => ";") # => Generate the csv string
 
 ```
 
-The generated string from the exmaple will look like:
+The generated string from the example will look like:
 
 ```
 col1;col2;col3
