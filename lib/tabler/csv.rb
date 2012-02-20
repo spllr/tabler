@@ -25,19 +25,19 @@ module Tabler
     # and a :values field
     #
     def normalized_data
-      result = {}
-      result[:headers] = data.inject([]) do |h,a|
-        a.each { |k,v| h << k unless h.include?(k) }
-        h
-      end
+      result = { :headers => [], :values => [] }
 
-      result[:values] = data.map do |h|
-        row = []
-        h.each do |k,v|
-          index_of_key = result[:headers].index(k)
-          row[index_of_key] = v
+      data.each do |row|
+        values = []
+        row.each do |key,val|
+          # add the header field if needed
+          result[:headers] << key unless result[:headers].include?(key)
+
+          # build the values array
+          index_of_header = result[:headers].index(key)
+          values[index_of_header] = val
         end
-        row
+        result[:values] << values
       end
       result
     end

@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Tabler::VERSION
   s.authors     = ["Klaas Speller"]
   s.email       = ["klaasspeller@gmail.com"]
-  s.homepage    = ""
-  s.summary     = %q{Create csv a hash}
-  s.description = %q{Create csv data from a hash of an array of hashes}
+  s.homepage    = "https://github.com/spllr/tabler"
+  s.summary     = %q{Create csv from an array of hashes}
+  s.description = %q{Create csv data from an array of arrays of hashes}
 
   s.rubyforge_project = "tabler"
 
@@ -18,8 +18,5 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
   s.add_development_dependency "rspec"
-
-  # s.add_runtime_dependency "rest-client"
 end
